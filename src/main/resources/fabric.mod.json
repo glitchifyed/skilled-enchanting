@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.glitchifyed.quick_elytra.QuickElytra"
+    ],
+    "client": [
+      "net.glitchifyed.quick_elytra.QuickElytraClient"
     ]
   },
   "mixins": [
