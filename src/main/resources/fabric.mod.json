@@ -4,16 +4,17 @@
   "version": "${version}",
 
   "name": "Quick Elytra",
-  "description": "Quick Elytra adds a keybind that lets you swap your equipped elytra/chestplate. It prioritises equipment with the highest enchantments.",
+  "description": "Quick Elytra adds a keybind that lets you swap your equipped elytra/chestplate. It prioritises equipment with the most enchantments/enchantment levels and durability.",
   "authors": [
     "glitchifyed"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://modrinth.com/mod/quick-elytra",
+    "sources": "https://github.com/glitchifyed/quick-elytra",
+    "issues": "https://github.com/glitchifyed/quick-elytra/issues"
   },
 
-  "license": "CC0-1.0",
+  "license": "GPL-3.0",
   "icon": "assets/quick_elytra/icon.png",
 
   "environment": "*",
