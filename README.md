@@ -1,9 +1,4 @@
-# Fabric Example Mod
+# Quick Elytra
+Quick Elytra adds a keybind that lets you swap your equipped elytra/chestplate. It prioritises equipment with the most enchantments/enchantment levels and durability.
 
-## Setup
-
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+The default keybind is 'G' but can easily be changed in the keybind control settings.
