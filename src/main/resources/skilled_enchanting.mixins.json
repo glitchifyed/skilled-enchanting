@@ -1,12 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.glitchifyed.quick_elytra.mixin",
+  "package": "net.glitchifyed.skilled_enchanting.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
   ],
   "client": [
-    "QuickElytraMixin"
+    "SkilledEnchantingMixin"
   ],
   "injectors": {
     "defaultRequire": 1

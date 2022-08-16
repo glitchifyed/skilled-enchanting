@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "QTQ",
+    "WRW"
+  ],
+  "key": {
+    "W": {
+      "tag": "minecraft:crying_obsidian"
+    },
+    "R": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "Q": {
+      "item": "minecraft:obsidian"
+    },
+    "T": {
+      "item": "minecraft:diamond_block"
+    },
+    "X": {
+      "item": "minecraft:smooth_stone"
+    },
+    "Y": {
+      "item": "minecraft:gold_block"
+    }
+  },
+  "result": {
+    "item": "skilled_enchanting:enchanter",
+    "count": 1
+  }
+}

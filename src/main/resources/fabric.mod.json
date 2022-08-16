@@ -1,33 +1,33 @@
 {
   "schemaVersion": 1,
-  "id": "quick_elytra",
+  "id": "skilled_enchanting",
   "version": "${version}",
 
-  "name": "Quick Elytra",
-  "description": "Quick Elytra adds a keybind that lets you swap your equipped elytra/chestplate. It prioritises equipment with the most enchantments/enchantment levels and durability.",
+  "name": "Skilled Enchanting",
+  "description": "WIP",
   "authors": [
     "glitchifyed"
   ],
   "contact": {
-    "homepage": "https://modrinth.com/mod/quick-elytra",
-    "sources": "https://github.com/glitchifyed/quick-elytra",
-    "issues": "https://github.com/glitchifyed/quick-elytra/issues"
+    "homepage": "https://modrinth.com/mod/skilled-enchanting",
+    "sources": "https://github.com/glitchifyed/skilled-enchanting",
+    "issues": "https://github.com/glitchifyed/skilled-enchanting/issues"
   },
 
   "license": "LGPL-3.0",
-  "icon": "assets/quick_elytra/icon.png",
+  "icon": "assets/skilled_enchanting/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.glitchifyed.quick_elytra.QuickElytra"
+      "net.glitchifyed.skilled_enchanting.SkilledEnchanting"
     ],
     "client": [
-      "net.glitchifyed.quick_elytra.QuickElytraClient"
+      "net.glitchifyed.skilled_enchanting.SkilledEnchantingClient"
     ]
   },
   "mixins": [
-    "quick_elytra.mixins.json"
+    "skilled_enchanting.mixins.json"
   ],
 
   "depends": {
