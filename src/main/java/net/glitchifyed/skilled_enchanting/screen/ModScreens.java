@@ -9,6 +9,6 @@ public class ModScreens {
     public static ScreenHandlerType<EnchanterScreenHandler> ENCHANTER_SCREEN_HANDLER;
 
     public static void registerScreenHandlers() {
-        ENCHANTER_SCREEN_HANDLER = ScreenHandlerRegistry.registerSimple(new Identifier(SkilledEnchanting.MODID, "enchanter"), EnchanterScreenHandler::new);
+        ENCHANTER_SCREEN_HANDLER = ScreenHandlerRegistry.registerExtended(new Identifier(SkilledEnchanting.MODID, "enchanter"), EnchanterScreenHandler::new);
     }
 }

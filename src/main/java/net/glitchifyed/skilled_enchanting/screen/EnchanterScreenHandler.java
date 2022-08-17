@@ -12,6 +12,7 @@ import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.network.PacketByteBuf;
 import net.minecraft.screen.EnchantmentScreenHandler;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerType;
@@ -23,19 +24,22 @@ import org.jetbrains.annotations.Nullable;
 public class EnchanterScreenHandler extends ScreenHandler {
     private final Inventory inventory;
     private boolean justChanged = false;
-    private BlockPos blockPos = null;
+    private BlockPos pos;
 
-    public EnchanterScreenHandler(int syncId, PlayerInventory playerInventory) {
-        this(syncId, playerInventory, null, null);
+    public EnchanterScreenHandler(int syncId, PlayerInventory playerInventory, PacketByteBuf buf) {
+        this(syncId, playerInventory, (Inventory) null);
+        pos = buf.readBlockPos();
     }
 
-    public EnchanterScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, BlockPos blockPos) {
+    public EnchanterScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory) {
         super(ModScreens.ENCHANTER_SCREEN_HANDLER, syncId);
+
+        pos = BlockPos.ORIGIN;
 
         if (inventory == null) {
             inventory = new SimpleInventory(3) {
                 public void markDirty() {
-                    //super.markDirty();
+                    super.markDirty();
                     EnchanterScreenHandler.this.onContentChanged(this);
                 }
             };
@@ -43,7 +47,6 @@ public class EnchanterScreenHandler extends ScreenHandler {
 
         checkSize(inventory, 3);
         this.inventory = inventory;
-        this.blockPos = blockPos;
         inventory.onOpen(playerInventory.player);
 
         int m;
@@ -76,9 +79,9 @@ public class EnchanterScreenHandler extends ScreenHandler {
             public void onTakeItem(PlayerEntity player, ItemStack stack) {
                 SkilledEnchanting.LOGGER.info("THING!");
 
-                //ClientPlayNetworking.send(ModMessages.ENCHANTER_TAKE_ID, PacketByteBufs.create().writeItemStack(inventory.getStack(0)).writeItemStack(inventory.getStack(1)));
+                ClientPlayNetworking.send(ModMessages.ENCHANTER_TAKE_ID, PacketByteBufs.create().writeBlockPos(pos));//.writeItemStack(inventory.getStack(0)).writeItemStack(inventory.getStack(1)));
 
-                ItemStack stackTwo = inventory.getStack(1);
+                /*ItemStack stackTwo = inventory.getStack(1);
 
                 inventory.removeStack(0);
                 //inventory.removeStack(1, 1);
@@ -88,9 +91,7 @@ public class EnchanterScreenHandler extends ScreenHandler {
                     int consume = (int)Math.pow(2, level);
 
                     inventory.removeStack(1, consume);
-                }
-
-
+                }*/
             }
         });
 
@@ -103,7 +104,10 @@ public class EnchanterScreenHandler extends ScreenHandler {
         for (m = 0; m < 9; ++m) {
             this.addSlot(new Slot(playerInventory, m, 8 + m * 18, 142));
         }
+    }
 
+    public BlockPos getPos() {
+        return pos;
     }
 
     @Override
@@ -114,7 +118,7 @@ public class EnchanterScreenHandler extends ScreenHandler {
             return;
         }
 
-        //super.onContentChanged(inventory);
+        super.onContentChanged(inventory);
 
         if (inventory == this.inventory) {
             ItemStack stackOne = inventory.getStack(0);
