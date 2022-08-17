@@ -18,9 +18,12 @@ import net.minecraft.util.math.BlockPos;
 
 public class EnchanterBlockEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
+    private BlockPos blockPos = null;
 
     public EnchanterBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.ENCHANTER_BLOCK_ENTITY, pos, state);
+
+        this.blockPos = pos;
     }
 
     @Override
@@ -30,7 +33,7 @@ public class EnchanterBlockEntity extends BlockEntity implements NamedScreenHand
 
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
-        return new EnchanterScreenHandler(syncId, playerInventory, this);
+        return new EnchanterScreenHandler(syncId, playerInventory, this, this.blockPos);
     }
 
     @Override

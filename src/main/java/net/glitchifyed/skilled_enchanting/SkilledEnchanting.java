@@ -7,6 +7,7 @@ import net.glitchifyed.skilled_enchanting.block.EnchanterBlock;
 import net.glitchifyed.skilled_enchanting.block.ModBlocks;
 import net.glitchifyed.skilled_enchanting.block.entity.ModBlockEntities;
 import net.glitchifyed.skilled_enchanting.config.ModConfigs;
+import net.glitchifyed.skilled_enchanting.networking.ModMessages;
 import net.glitchifyed.skilled_enchanting.screen.ModScreens;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
@@ -27,11 +28,13 @@ public class SkilledEnchanting implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModConfigs.registerConfigs();
+
 		ModBlocks.registerModBlocks();
 		ModBlockEntities.registerModBlockEntities();
 
 		ModScreens.registerScreenHandlers();
 
-		ModConfigs.registerConfigs();
+		ModMessages.registerC2SPackets();
 	}
 }
