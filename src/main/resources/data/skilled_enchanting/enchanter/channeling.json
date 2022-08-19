@@ -1,0 +1,11 @@
+{
+  "enchantment": "minecraft:channeling",
+  "material": "minecraft:lightning_rod",
+  "amount": 5,
+  "increase": 2,
+  "max": 1,
+  "xp": 15,
+  "dislikes": [
+    "minecraft:riptide"
+  ]
+}

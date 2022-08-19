@@ -1,0 +1,12 @@
+{
+  "enchantment": "minecraft:riptide",
+  "material": "minecraft:dark_prismarine",
+  "amount": 8,
+  "increase": 2,
+  "max": -1,
+  "xp": 15,
+  "dislikes": [
+    "minecraft:loyalty",
+    "minecraft:channeling"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "enchantment": "minecraft:loyalty",
+  "material": "minecraft:lead",
+  "amount": 8,
+  "increase": 2,
+  "max": 3,
+  "xp": 15,
+  "dislikes": [
+    "minecraft:riptide"
+  ]
+}

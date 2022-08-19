@@ -1,0 +1,9 @@
+{
+  "enchantment": "minecraft:knockback",
+  "material": "minecraft:slime_ball",
+  "amount": 16,
+  "increase": 2,
+  "max": -1,
+  "xp": 10,
+  "dislikes": []
+}

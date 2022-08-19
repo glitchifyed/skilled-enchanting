@@ -13,10 +13,11 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModBlocks {
-    public static final Block ENCHANTER_BLOCK = new EnchanterBlock(FabricBlockSettings.copyOf(Blocks.ENCHANTING_TABLE).luminance(1).hardness(5.0f).strength(4.0f).requiresTool());
+    public static final Block ENCHANTER_BLOCK = new EnchanterBlock(FabricBlockSettings.copyOf(Blocks.ENCHANTING_TABLE).requiresTool());
+    public static final Block CONDENSED_OBSIDIAN = new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).hardness(150f).resistance(3500f).requiresTool());
 
     private static Block registerBlock(String name, Block block, ItemGroup tab) {
-        registerBlockItem("enchanter", ENCHANTER_BLOCK, tab);
+        registerBlockItem(name, block, tab);
         return Registry.register(Registry.BLOCK, new Identifier(SkilledEnchanting.MODID, name), block);
     }
 
@@ -26,8 +27,7 @@ public class ModBlocks {
     }
 
     public static void registerModBlocks() {
-        //Registry.register(Registry.BLOCK, new Identifier(SkilledEnchanting.MODID, "enchanter"), ENCHANTER_BLOCK);
-        //Registry.register(Registry.ITEM, new Identifier(SkilledEnchanting.MODID, "enchanter"), new BlockItem(ENCHANTER_BLOCK, new FabricItemSettings().group(ItemGroup.DECORATIONS)));
         registerBlock("enchanter", ENCHANTER_BLOCK, ItemGroup.DECORATIONS);
+        registerBlock("condensed_obsidian", CONDENSED_OBSIDIAN, ItemGroup.BUILDING_BLOCKS);
     }
 }

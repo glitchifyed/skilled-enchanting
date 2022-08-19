@@ -1,0 +1,9 @@
+{
+  "enchantment": "minecraft:fire_aspect",
+  "material": "minecraft:magma_cream",
+  "amount": 16,
+  "increase": 2,
+  "max": -1,
+  "xp": 9,
+  "dislikes": []
+}

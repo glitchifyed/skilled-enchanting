@@ -1,0 +1,13 @@
+{
+  "enchantment": "minecraft:fire_protection",
+  "material": "minecraft:blaze_rod",
+  "amount": 2,
+  "increase": 2,
+  "max": -1,
+  "xp": 10,
+  "dislikes": [
+    "minecraft:protection",
+    "minecraft:blast_protection",
+    "minecraft:projectile_protection"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "enchantment": "minecraft:blast_protection",
+  "material": "minecraft:obsidian",
+  "amount": 2,
+  "increase": 2,
+  "max": -1,
+  "xp": 10,
+  "dislikes": [
+    "minecraft:protection",
+    "minecraft:fire_protection",
+    "minecraft:projectile_protection"
+  ]
+}

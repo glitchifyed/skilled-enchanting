@@ -1,0 +1,9 @@
+{
+  "enchantment": "minecraft:feather_falling",
+  "material": "minecraft:slime_block",
+  "amount": 4,
+  "increase": 2,
+  "max": -1,
+  "xp": 10,
+  "dislikes": []
+}

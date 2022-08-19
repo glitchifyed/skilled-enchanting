@@ -1,0 +1,9 @@
+{
+  "enchantment": "minecraft:piercing",
+  "material": "minecraft:spectral_arrow",
+  "amount": 4,
+  "increase": 2,
+  "max": -1,
+  "xp": 12,
+  "dislikes": []
+}

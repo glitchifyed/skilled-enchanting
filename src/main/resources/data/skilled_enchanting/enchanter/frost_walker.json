@@ -1,0 +1,9 @@
+{
+  "enchantment": "minecraft:frost_walker",
+  "material": "minecraft:blue_ice",
+  "amount": 16,
+  "increase": 2,
+  "max": -1,
+  "xp": 12,
+  "dislikes": []
+}

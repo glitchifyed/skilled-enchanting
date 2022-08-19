@@ -1,0 +1,9 @@
+{
+  "enchantment": "minecraft:quick_charge",
+  "material": "minecraft:string",
+  "amount": 8,
+  "increase": 2,
+  "max": -1,
+  "xp": 15,
+  "dislikes": []
+}

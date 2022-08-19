@@ -1,0 +1,9 @@
+{
+  "enchantment": "minecraft:power",
+  "material": "minecraft:blaze_powder",
+  "amount": 2,
+  "increase": 2,
+  "max": -1,
+  "xp": 12,
+  "dislikes": []
+}

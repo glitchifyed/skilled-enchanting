@@ -1,0 +1,9 @@
+{
+  "enchantment": "minecraft:smite",
+  "material": "minecraft:bone_block",
+  "amount": 2,
+  "increase": 2,
+  "max": -1,
+  "xp": 12,
+  "dislikes": []
+}

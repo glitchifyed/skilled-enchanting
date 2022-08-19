@@ -1,0 +1,13 @@
+{
+  "enchantment": "minecraft:projectile_protection",
+  "material": "minecraft:copper_block",
+  "amount": 2,
+  "increase": 2,
+  "max": -1,
+  "xp": 10,
+  "dislikes": [
+    "minecraft:protection",
+    "minecraft:blast_protection",
+    "minecraft:fire_protection"
+  ]
+}

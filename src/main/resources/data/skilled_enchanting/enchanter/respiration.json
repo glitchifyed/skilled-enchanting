@@ -1,0 +1,9 @@
+{
+  "enchantment": "minecraft:respiration",
+  "material": "minecraft:pufferfish",
+  "amount": 4,
+  "increase": 2,
+  "max": -1,
+  "xp": 15,
+  "dislikes": []
+}

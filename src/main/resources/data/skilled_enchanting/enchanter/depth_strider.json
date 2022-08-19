@@ -1,0 +1,9 @@
+{
+  "enchantment": "minecraft:depth_strider",
+  "material": "minecraft:sponge",
+  "amount": 8,
+  "increase": 2,
+  "max": -1,
+  "xp": 12,
+  "dislikes": []
+}

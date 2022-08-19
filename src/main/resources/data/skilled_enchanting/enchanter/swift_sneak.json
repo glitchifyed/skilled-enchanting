@@ -1,0 +1,9 @@
+{
+  "enchantment": "minecraft:swift_sneak",
+  "material": "minecraft:echo_shard",
+  "amount": 8,
+  "increase": 2,
+  "max": -1,
+  "xp": 20,
+  "dislikes": []
+}

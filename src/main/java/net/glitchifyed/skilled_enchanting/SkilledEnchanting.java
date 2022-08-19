@@ -1,20 +1,10 @@
 package net.glitchifyed.skilled_enchanting;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.glitchifyed.skilled_enchanting.block.EnchanterBlock;
 import net.glitchifyed.skilled_enchanting.block.ModBlocks;
 import net.glitchifyed.skilled_enchanting.block.entity.ModBlockEntities;
-import net.glitchifyed.skilled_enchanting.config.ModConfigs;
 import net.glitchifyed.skilled_enchanting.networking.ModMessages;
 import net.glitchifyed.skilled_enchanting.screen.ModScreens;
-import net.minecraft.block.Block;
-import net.minecraft.block.Material;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,7 +18,7 @@ public class SkilledEnchanting implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModConfigs.registerConfigs();
+		ModResources.registerServer();
 
 		ModBlocks.registerModBlocks();
 		ModBlockEntities.registerModBlockEntities();

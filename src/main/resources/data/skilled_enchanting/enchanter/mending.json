@@ -1,0 +1,9 @@
+{
+  "enchantment": "minecraft:mending",
+  "material": "minecraft:experience_bottle",
+  "amount": 64,
+  "increase": 2,
+  "max": 1,
+  "xp": 30,
+  "dislikes": []
+}

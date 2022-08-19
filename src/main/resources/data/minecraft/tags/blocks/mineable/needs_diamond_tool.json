@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "skilled_enchanting:enchanter"
+    "skilled_enchanting:enchanter",
+    "skilled_enchanting:condensed_obsidian"
   ]
 }

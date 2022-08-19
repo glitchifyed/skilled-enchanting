@@ -1,0 +1,9 @@
+{
+  "enchantment": "minecraft:bane_of_arthropods",
+  "material": "minecraft:fermented_spider_eye",
+  "amount": 2,
+  "increase": 2,
+  "max": -1,
+  "xp": 12,
+  "dislikes": []
+}

@@ -1,0 +1,11 @@
+{
+  "enchantment": "minecraft:fortune",
+  "material": "minecraft:netherite_scrap",
+  "amount": 2,
+  "increase": 2,
+  "max": -1,
+  "xp": 10,
+  "dislikes": [
+    "minecraft:silk_touch"
+  ]
+}

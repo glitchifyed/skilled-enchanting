@@ -1,0 +1,9 @@
+{
+  "enchantment": "minecraft:flame",
+  "material": "minecraft:lava_bucket",
+  "amount": 1,
+  "increase": 2,
+  "max": 1,
+  "xp": 20,
+  "dislikes": []
+}

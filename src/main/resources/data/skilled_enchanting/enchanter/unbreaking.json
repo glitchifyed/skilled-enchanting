@@ -1,0 +1,9 @@
+{
+  "enchantment": "minecraft:unbreaking",
+  "material": "minecraft:iron_ingot",
+  "amount": 8,
+  "increase": 2,
+  "max": -1,
+  "xp": 5,
+  "dislikes": []
+}

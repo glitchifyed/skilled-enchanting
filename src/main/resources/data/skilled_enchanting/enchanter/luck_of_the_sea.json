@@ -1,0 +1,13 @@
+{
+  "enchantment": "minecraft:luck_of_the_sea",
+  "material": "minecraft:heart_of_the_sea",
+  "amount": 1,
+  "increase": 2,
+  "max": 4,
+  "xp": 7,
+  "dislikes": [
+    "minecraft:protection",
+    "minecraft:blast_protection",
+    "minecraft:projectile_protection"
+  ]
+}

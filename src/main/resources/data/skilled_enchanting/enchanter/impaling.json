@@ -1,0 +1,9 @@
+{
+  "enchantment": "minecraft:impaling",
+  "material": "minecraft:prismarine_shard",
+  "amount": 2,
+  "increase": 2,
+  "max": -1,
+  "xp": 8,
+  "dislikes": []
+}

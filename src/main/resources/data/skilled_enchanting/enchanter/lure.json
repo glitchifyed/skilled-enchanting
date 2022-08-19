@@ -1,0 +1,9 @@
+{
+  "enchantment": "minecraft:lure",
+  "material": "minecraft:tropical_fish",
+  "amount": 8,
+  "increase": 2,
+  "max": -1,
+  "xp": 10,
+  "dislikes": []
+}

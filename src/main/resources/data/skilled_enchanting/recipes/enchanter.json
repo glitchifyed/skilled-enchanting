@@ -2,27 +2,24 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "XYX",
-    "QTQ",
-    "WRW"
+    "WQW",
+    "WTW"
   ],
   "key": {
     "W": {
-      "tag": "minecraft:crying_obsidian"
-    },
-    "R": {
-      "item": "minecraft:amethyst_shard"
+      "item": "skilled_enchanting:condensed_obsidian"
     },
     "Q": {
-      "item": "minecraft:obsidian"
-    },
-    "T": {
       "item": "minecraft:diamond_block"
     },
+    "T": {
+      "item": "minecraft:enchanting_table"
+    },
     "X": {
-      "item": "minecraft:smooth_stone"
+      "item": "minecraft:amethyst_block"
     },
     "Y": {
-      "item": "minecraft:gold_block"
+      "item": "minecraft:netherite_ingot"
     }
   },
   "result": {

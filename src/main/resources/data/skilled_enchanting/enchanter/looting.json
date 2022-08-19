@@ -1,0 +1,9 @@
+{
+  "enchantment": "minecraft:looting",
+  "material": "minecraft:lapis_block",
+  "amount": 8,
+  "increase": 2,
+  "max": -1,
+  "xp": 15,
+  "dislikes": []
+}

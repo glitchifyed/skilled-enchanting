@@ -1,0 +1,9 @@
+{
+  "enchantment": "minecraft:infinity",
+  "material": "minecraft:arrow",
+  "amount": 64,
+  "increase": 2,
+  "max": 1,
+  "xp": 15,
+  "dislikes": []
+}

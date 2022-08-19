@@ -1,0 +1,9 @@
+{
+  "enchantment": "minecraft:sweeping",
+  "material": "minecraft:ender_pearl",
+  "amount": 2,
+  "increase": 2,
+  "max": -1,
+  "xp": 12,
+  "dislikes": []
+}

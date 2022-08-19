@@ -1,0 +1,11 @@
+{
+  "enchantment": "minecraft:silk_touch",
+  "material": "minecraft:cobweb",
+  "amount": 16,
+  "increase": 2,
+  "max": 1,
+  "xp": 20,
+  "dislikes": [
+    "minecraft:fortune"
+  ]
+}

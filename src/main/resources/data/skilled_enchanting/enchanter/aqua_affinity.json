@@ -1,0 +1,9 @@
+{
+  "enchantment": "minecraft:aqua_affinity",
+  "material": "minecraft:sea_lantern",
+  "amount": 16,
+  "increase": 2,
+  "max": 1,
+  "xp": 20,
+  "dislikes": []
+}
