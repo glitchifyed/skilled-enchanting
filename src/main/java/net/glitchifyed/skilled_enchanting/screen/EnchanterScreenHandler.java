@@ -62,7 +62,7 @@ public class EnchanterScreenHandler extends ScreenHandler {
 
         this.addSlot(new Slot(inventory, 0, 34, 38) {
             public boolean canInsert(ItemStack stack) {
-                return stack.isEnchantable() || stack.getEnchantments().size() != 0;
+                return stack.isOf(Items.ENCHANTED_BOOK) || stack.isEnchantable() || stack.getEnchantments().size() != 0;
             }
 
             public int getMaxItemCount() {

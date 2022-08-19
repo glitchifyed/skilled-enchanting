@@ -5,6 +5,7 @@ import com.google.gson.JsonElement;
 import net.glitchifyed.skilled_enchanting.SkilledEnchanting;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.item.EnchantedBookItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
@@ -41,20 +42,50 @@ public class EnchanterRecipe {
     }
 
     public static boolean isEnchantable(ItemStack itemStack) {
-        return itemStack.isEnchantable() || itemStack.getEnchantments().size() != 0;
+        return itemStack.isOf(Items.BOOK) || itemStack.isOf(Items.ENCHANTED_BOOK) || itemStack.isEnchantable() || itemStack.getEnchantments().size() != 0;
     }
 
-    public static boolean getCompatible(ItemStack itemStack, List<Enchantment> enchs) {
-        if (!isEnchantable(itemStack)) {
-            return false;
+    public static Map<Enchantment, Integer> getEnchantments(ItemStack itemStack) {
+        NbtList nbtList = itemStack.getEnchantments();
+
+        return EnchantmentHelper.fromNbt(nbtList);
+
+        /*if (itemStack.isOf(Items.ENCHANTED_BOOK)) {
+            NbtCompound nbt = itemStack.getNbt();
+
+            if (nbt != null) {
+                SkilledEnchanting.LOGGER.info(nbt.getList("Enchantments", 9).toString());
+
+                return EnchantmentHelper.fromNbt(nbt.getList("Enchantments", 9));
+            }
         }
 
-        if (enchs.size() == 0) {
+        return EnchantmentHelper.get(itemStack);*/
+    }
+
+    public static boolean getCompatible(ItemStack stackOne, ItemStack stackTwo) {
+        Map<Enchantment, Integer> enchList = getEnchantments(stackTwo);
+
+        if (enchList.size() == 0) {
+            enchList = getEnchantments(stackOne);
+
+            if (enchList.size() == 0) {
+                return true;
+            }
+
+            for (Map.Entry<Enchantment, Integer> entry : enchList.entrySet()) {
+                if (!getCompatible(stackTwo, entry.getKey())) {
+                    return false;
+                }
+            }
+
             return true;
         }
 
-        for (Enchantment ench : enchs) {
-            if (!getCompatible(itemStack, ench)) {
+        for (Map.Entry<Enchantment, Integer> entry : enchList.entrySet()) {
+            Enchantment ench = entry.getKey();
+
+            if (!getCompatible(stackOne, ench)) {
                 return false;
             }
         }
@@ -77,7 +108,7 @@ public class EnchanterRecipe {
 
         String checkId = String.valueOf(EnchantmentHelper.getEnchantmentId(enchantment));
 
-        Map<Enchantment, Integer> enchList = EnchantmentHelper.get(itemStack);
+        Map<Enchantment, Integer> enchList = getEnchantments(itemStack);//EnchantmentHelper.get(itemStack);
 
         if (enchList.size() == 0) {
             return true;
@@ -121,6 +152,10 @@ public class EnchanterRecipe {
 
     public static int[] getDetails(EnchanterRecipe recipe, ItemStack stack) {
         if (recipe == null) {
+            if (stack.isOf(Items.ENCHANTED_BOOK)) {
+                return new int[]{0, 1, 10 * getEnchantments(stack).size()};
+            }
+
             return null;
         }
 
@@ -150,6 +185,40 @@ public class EnchanterRecipe {
         EnchanterRecipe recipe = getRecipe(stackTwo);
 
         if (recipe == null) {
+            if (stackTwo.isOf(Items.ENCHANTED_BOOK)) {
+                if (getCompatible(stackOne, stackTwo)) {
+                    ItemStack newStack;
+
+                    if (stackOne.isOf(Items.BOOK)) {
+                        newStack = new ItemStack(Items.ENCHANTED_BOOK);
+
+                        NbtCompound nbt = stackOne.getNbt();
+
+                        if (nbt != null) {
+                            newStack.setNbt(nbt.copy());
+                        }
+                    }
+                    else {
+                        newStack = stackOne.copy();
+                    }
+
+                    Map<Enchantment, Integer> enchList = getEnchantments(stackTwo);
+
+                    if (enchList.size() == 0) {
+                        return ItemStack.EMPTY;
+                    }
+
+                    for (Map.Entry<Enchantment, Integer> entry : enchList.entrySet()) {
+                        Enchantment ench = entry.getKey();
+                        int level = entry.getValue();
+
+                        newStack.addEnchantment(ench, level);
+                    }
+
+                    return newStack;
+                }
+            }
+
             return ItemStack.EMPTY;
         }
 
@@ -164,28 +233,16 @@ public class EnchanterRecipe {
             if (getCompatible(stackOne, enchantment)) {
                 ItemStack newStack;
 
-                if (stackOne.isOf(Items.BOOK) || stackOne.isOf(Items.ENCHANTED_BOOK)) {
+                if (stackOne.isOf(Items.BOOK)) {// || stackOne.isOf(Items.ENCHANTED_BOOK)) {
                     newStack = new ItemStack(Items.ENCHANTED_BOOK);
 
-                    ItemStack otherStack = stackOne.copy();
-
-                    NbtCompound ogNbt = otherStack.getNbt();
-
-                    NbtList list = new NbtList();
-
-                    if (ogNbt != null) {
-                        list = ogNbt.getList("StoredEnchantments", 7);
-                    }
-
-                    list.addElement(list.size(), EnchantmentHelper.createNbt(Identifier.tryParse(recipe.enchantment), level));
-
-                    otherStack.setSubNbt("StoredEnchantments", list);
-
-                    NbtCompound nbt = otherStack.getNbt();
+                    NbtCompound nbt = stackOne.getNbt();
 
                     if (nbt != null) {
                         newStack.setNbt(nbt.copy());
                     }
+
+                    newStack.addEnchantment(enchantment, level);
                 } else {
                     newStack = stackOne.copy();
                     newStack.addEnchantment(enchantment, level);

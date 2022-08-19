@@ -42,7 +42,7 @@ public class EnchanterTakeC2SPacket {
                     ItemStack stackOne = items.get(0);
                     ItemStack stackTwo = items.get(1);
 
-                    if (!stackOne.isEmpty() && !stackTwo.isEmpty() && (stackOne.isEnchantable() || stackOne.getEnchantments().size() != 0)) {
+                    if (!stackOne.isEmpty() && !stackTwo.isEmpty() && (stackOne.isOf(Items.ENCHANTED_BOOK) || stackOne.isEnchantable() || stackOne.getEnchantments().size() != 0)) {
                         ItemStack newStack = EnchanterRecipe.getOutputStack(stackOne, stackTwo);
 
                         if (!newStack.isEmpty()) {
