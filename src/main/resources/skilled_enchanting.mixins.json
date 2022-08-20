@@ -7,7 +7,6 @@
 
   ],
   "client": [
-    "TradeOffersAccessor"
   ],
   "injectors": {
     "defaultRequire": 1
