@@ -5,6 +5,9 @@ import net.glitchifyed.skilled_enchanting.block.ModBlocks;
 import net.glitchifyed.skilled_enchanting.block.entity.ModBlockEntities;
 import net.glitchifyed.skilled_enchanting.networking.ModMessages;
 import net.glitchifyed.skilled_enchanting.screen.ModScreens;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.MendingEnchantment;
+import net.minecraft.entity.EquipmentSlot;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

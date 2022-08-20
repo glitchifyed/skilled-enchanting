@@ -4,9 +4,10 @@
   "package": "net.glitchifyed.skilled_enchanting.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+
   ],
   "client": [
-    "SkilledEnchantingMixin"
+    "TradeOffersAccessor"
   ],
   "injectors": {
     "defaultRequire": 1

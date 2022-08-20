@@ -24,6 +24,8 @@ import java.util.Arrays;
 import java.util.Map;
 
 public class ModResources {
+    static String print_thing_to_print = "";
+
     public static void registerServer() {
         ResourceManagerHelper.get(ResourceType.SERVER_DATA).registerReloadListener(new SimpleSynchronousResourceReloadListener() {
             @Override
@@ -81,6 +83,8 @@ public class ModResources {
                         SkilledEnchanting.LOGGER.error("Error occurred while loading resource json " + id.toString(), e);
                     }
                 }
+
+                SkilledEnchanting.LOGGER.info(print_thing_to_print);
             }
         });
     }

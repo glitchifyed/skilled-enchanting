@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Skilled Enchanting",
-  "description": "WIP",
+  "description": "Skilled Enchanting is a Minecraft mod that improves the vanilla enchanting system by adding a new block called the Enchanter.\nThe enchanter works similarly to an Enchanting Table, except instead of having random enchantments, you use certain materials to 'craft' certain enchantments.\nYou can also insert bookshelves into the first slot of the Enchanter, which will decrease the amount of levels that are consumed when enchanting items.\nSee the mod pages or Github for more information on customisability.",
   "authors": [
     "glitchifyed"
   ],

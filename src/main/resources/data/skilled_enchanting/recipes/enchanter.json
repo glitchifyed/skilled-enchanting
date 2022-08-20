@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "XYX",
+    "XXX",
     "WQW",
     "WTW"
   ],
@@ -17,9 +17,6 @@
     },
     "X": {
       "item": "minecraft:amethyst_block"
-    },
-    "Y": {
-      "item": "minecraft:netherite_ingot"
     }
   },
   "result": {

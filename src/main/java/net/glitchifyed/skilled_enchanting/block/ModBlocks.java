@@ -14,7 +14,7 @@ import net.minecraft.util.registry.Registry;
 
 public class ModBlocks {
     public static final Block ENCHANTER_BLOCK = new EnchanterBlock(FabricBlockSettings.copyOf(Blocks.ENCHANTING_TABLE).requiresTool());
-    public static final Block CONDENSED_OBSIDIAN = new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).hardness(150f).resistance(3500f).requiresTool());
+    public static final Block CONDENSED_OBSIDIAN = new CondensedObsidianBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).hardness(150f).resistance(3500f).requiresTool());
 
     private static Block registerBlock(String name, Block block, ItemGroup tab) {
         registerBlockItem(name, block, tab);
