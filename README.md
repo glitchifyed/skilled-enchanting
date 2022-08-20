@@ -4,6 +4,10 @@ Skilled Enchanting is a Minecraft mod that improves the vanilla enchanting syste
 The enchanter works similarly to an Enchanting Table, except instead of having random enchantments, you use certain materials to 'craft' certain enchantments.
 You can also insert bookshelves into the first slot of the Enchanter, which will decrease the amount of levels that are consumed when enchanting items.
 
+### Offical downloads
+https://modrinth.com/mod/skilled-enchanting
+https://www.curseforge.com/minecraft/mc-mods/skilled-enchanting/
+
 ## Crafting
 The Enchanter is crafted with a few items. One of these is a new item called Condensed Obsidian.
 \
