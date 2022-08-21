@@ -6,6 +6,7 @@ You can also insert bookshelves into the first slot of the Enchanter, which will
 
 ### Offical downloads
 https://modrinth.com/mod/skilled-enchanting
+\
 https://www.curseforge.com/minecraft/mc-mods/skilled-enchanting/
 
 ## Crafting
